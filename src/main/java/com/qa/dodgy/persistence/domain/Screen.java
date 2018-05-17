@@ -14,21 +14,8 @@ public class Screen {
 	private String screenNumber;
 	private String screenType;
 	
-	
-	public Screen(Long id, String numberofSeats, String screenNumber, String screenType) {
-		this.id = id;
-		this.numberofSeats = numberofSeats;
-		this.screenNumber = screenNumber;
-		this.screenType = screenType;
-		
-	}
-
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getNumberofSeats() {

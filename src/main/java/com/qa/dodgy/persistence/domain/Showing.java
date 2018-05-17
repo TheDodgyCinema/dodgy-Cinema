@@ -9,10 +9,10 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Showing{
 	
-	
 	@Id
 	@GeneratedValue
 	private Long id;
+
 	private String startTime;
 	private String screenNumber;
 	private String dimension;
@@ -26,21 +26,9 @@ public class Showing{
 	public Showing() {
 		super();
 	}
-	
-	public Showing(Long id, String startTime, String screenNumber, String dimension) {
-		super();
-		this.id = id;
-		this.startTime = startTime;
-		this.screenNumber = screenNumber;
-		this.dimension = dimension;
-	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getStartTime() {

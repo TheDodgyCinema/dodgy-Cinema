@@ -11,6 +11,7 @@ public class Seat {
 	@Id
 	@GeneratedValue
 	private Long id;
+
 	private String seatNumber;
 	private String seatRow;
 	private String seatType;
@@ -22,20 +23,8 @@ public class Seat {
 		super();
 	}
 	
-	public Seat(String seatNumber, Long id, String seatRow, String seatType) {
-		super();
-		this.seatNumber = seatNumber;
-		this.id = id;
-		this.seatRow = seatRow;
-		this.seatType= seatType;
-    }
-	
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getSeatNumber() {

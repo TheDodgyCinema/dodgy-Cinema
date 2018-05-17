@@ -18,26 +18,10 @@ public class Movie {
 	private String actors;
 	private String reviews;
 	
-	public Movie(String title, Long id, String rating, String subtitles, String releaseYear, String director, String actors, String reviews) {
-		this.title = title;
-		this.id = id;
-		this.rating = rating;
-		this.subtitles = subtitles;
-		this.releaseYear = releaseYear;
-		this.director = director;
-		this.actors = actors;
-		this.reviews = reviews;
-		
-    }
-
 	public Long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
 	public String getTitle() {
 		return title;
 	}
