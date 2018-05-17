@@ -26,6 +26,22 @@ public class Ticket {
 		return id;
 	}
 
+	public Showing getShowing() {
+		return showing;
+	}
+
+	public void setShowing(Showing showing) {
+		this.showing = showing;
+	}
+
+	public Seat getSeat() {
+		return seat;
+	}
+
+	public void setSeat(Seat seat) {
+		this.seat = seat;
+	}
+
 }
 
 
