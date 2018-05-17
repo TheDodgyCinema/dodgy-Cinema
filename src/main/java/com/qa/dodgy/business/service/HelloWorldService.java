@@ -10,7 +10,7 @@ import com.qa.dodgy.persistence.domain.HelloWorld;
 
 public class HelloWorldService implements IHelloWorldService {
 	@Inject
-	IHelloWorldRepository repo;
+	private IHelloWorldRepository repo;
 
 	public String sayHello() {
 		String names = String.join(", ", getNames());
