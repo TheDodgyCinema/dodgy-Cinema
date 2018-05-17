@@ -1,17 +1,10 @@
 package com.qa.dodgy.persistence.domain;
 
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-
-import java.io.Serializable;
 
 @Entity
 public class Showing{
