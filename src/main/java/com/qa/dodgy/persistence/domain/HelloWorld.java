@@ -7,8 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class HelloWorld {
-	@Id
-	@GeneratedValue
+	@Id @GeneratedValue
+	@Column
 	private Long id;
 	@Column
 	private String name;
