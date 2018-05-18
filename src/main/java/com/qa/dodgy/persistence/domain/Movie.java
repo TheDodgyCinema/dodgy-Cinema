@@ -18,6 +18,10 @@ public class Movie {
 	private String actors;
 	private String reviews;
 	
+	public Movie() {
+		super();
+	}
+	
 	public Long getId() {
 		return id;
 	}
