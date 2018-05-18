@@ -14,4 +14,9 @@ public class MovieService implements IMovieService {
 	public List<Movie> getMovies() {
 		return repo.getMovies();
 	}
+
+	public void setRepo(IMovieRepository repo) {
+		this.repo = repo;
+	}
+
 }
