@@ -1,4 +1,4 @@
-package com.qa.util;
+package com.qa.dodgy.util.test;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.qa.dodgy.persistence.domain.Movie;
+import com.qa.dodgy.util.JSONUtil;
 
 
 public class JSONUtilTest {
