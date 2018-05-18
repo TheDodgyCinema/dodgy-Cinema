@@ -7,6 +7,18 @@ import javax.persistence.Id;
 @Entity
 public class Movie {
 
+	public Movie(String title, String rating, String subtitles, String releaseYear, String director, String actors,
+			String reviews) {
+		
+		this.title = title;
+		this.rating = rating;
+		this.subtitles = subtitles;
+		this.releaseYear = releaseYear;
+		this.director = director;
+		this.actors = actors;
+		this.reviews = reviews;
+	}
+
 	@Id
 	@GeneratedValue
 	private Long id;
