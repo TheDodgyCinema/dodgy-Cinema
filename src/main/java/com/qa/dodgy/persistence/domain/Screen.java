@@ -14,6 +14,10 @@ public class Screen {
 	private String screenNumber;
 	private String screenType;
 	
+	public Screen() {
+		super();
+	}
+
 	public Long getId() {
 		return id;
 	}
