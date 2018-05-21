@@ -14,8 +14,6 @@ public class MovieRepositoryDB implements IMovieRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
 	
-	@Inject
-	
 	public List<Movie> getMovies(){
 		TypedQuery<Movie> query = manager.createQuery("SELECT m FROM Movie m", Movie.class);
 		return query.getResultList();
