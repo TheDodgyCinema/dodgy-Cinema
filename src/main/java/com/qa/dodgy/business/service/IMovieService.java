@@ -12,5 +12,7 @@ public interface IMovieService {
 	public Movie getMovie(Long id);
 	
 	void setRepo(IMovieRepository repo);
+	
+	public Movie deleteMovie(Long id);
 
 }

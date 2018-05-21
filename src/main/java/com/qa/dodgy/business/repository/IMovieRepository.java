@@ -8,5 +8,7 @@ public interface IMovieRepository {
 	public List<Movie> getMovies();
 	
 	public Movie getMovie(Long id);
+	
+	public Movie deleteMovie(Long id);
 
 }
