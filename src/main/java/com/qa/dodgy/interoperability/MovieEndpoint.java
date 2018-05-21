@@ -1,6 +1,7 @@
 package com.qa.dodgy.interoperability;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -29,5 +30,12 @@ public class MovieEndpoint {
 	@Produces("application/json")
 	public Movie getMovie(@PathParam("id") Long id) {
 		return service.getMovie(id);
+	}
+	
+	@DELETE
+	@Path("/{id}")
+	@Produces("application/json")
+	public Movie deleteMovie(@PathParam("id") Long id) {
+		return service.deleteMovie(id);
 	}
 }

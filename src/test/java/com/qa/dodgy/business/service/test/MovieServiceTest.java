@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Before;
@@ -27,25 +28,36 @@ public class MovieServiceTest {
 	@Mock
 	private MovieRepositoryDB repo = new MovieRepositoryDB();
 	
-	private List<Movie> movies;
+	private HashMap<Long, Movie> movieDB = new HashMap<Long, Movie>();
 	
 	@Before
 	public void setUp() {
 		service.setRepo(repo);
-		movies = new ArrayList<Movie>();
-		movies.add(new Movie("IT", "18", "English", "2017", "Andy Muschietti", "Jaeden Lieberher", "Good"));
-		movies.add(new Movie("ID", "19", "Bnglish", "2018", "Bndy Muschietti", "Yaeden Lieberher", "Goof"));
+		movieDB.put(0L, new Movie("Under the Skin", "15", "None", "2014", "Jonathan Glazer", "Scarlett Johansson", "Good"));
+		movieDB.put(1L, new Movie("La Haine", "18", "English", "1996", "Mathieu Kassovitz", "Vincent Cassel", "Excellent"));
 	}
 
 	@Test
 	public void getMoviesTest() {
+		List<Movie> movies = new ArrayList<Movie>(movieDB.values());
 		when(repo.getMovies()).thenReturn(movies);
 		assertEquals(movies, service.getMovies());
 	}
 	
 	@Test
 	public void getMovieTest() {
-		when(repo.getMovie(anyLong())).thenReturn(movies.get(0));
-		assertEquals(movies.get(0), service.getMovie(1L));
+		long id = 0;
+		Movie movie = movieDB.get(id);
+		when(repo.getMovie(id)).thenReturn(movie);
+		assertEquals(movieDB.get(id), service.getMovie(id));
+	}
+	
+	@Test
+	public void deleteMovieTest() {
+		long id = 0;
+		Movie movie = movieDB.get(id);
+		when(repo.deleteMovie(id)).thenReturn(movie).thenReturn(null);
+		assertEquals(movie, service.deleteMovie(0L));
+		assertEquals(null, service.deleteMovie(0L));
 	}
 }

@@ -2,10 +2,10 @@ package com.qa.dodgy.business.repository;
 
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 
 import com.qa.dodgy.persistence.domain.Movie;
 
@@ -28,8 +28,17 @@ public class MovieRepositoryDB implements IMovieRepository {
 		return aMovie;
 	}
 	
+	@Transactional
+	public Movie deleteMovie(Long id) {
+		Movie movieInDB = findMovie(id);
+		manager.remove(movieInDB);
+		return movieInDB;
+	}
+	
 	public void setManager(EntityManager manager) {
 		this.manager = manager;
 	}
+	
+	
 	
 }
