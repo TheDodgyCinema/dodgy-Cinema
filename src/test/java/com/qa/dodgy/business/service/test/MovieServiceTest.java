@@ -51,4 +51,13 @@ public class MovieServiceTest {
 		when(repo.getMovie(id)).thenReturn(movie);
 		assertEquals(movieDB.get(id), service.getMovie(id));
 	}
+	
+	@Test
+	public void deleteMovieTest() {
+		long id = 0;
+		Movie movie = movieDB.get(id);
+		when(repo.deleteMovie(id)).thenReturn(movie).thenReturn(null);
+		assertEquals(movie, service.deleteMovie(0L));
+		assertEquals(null, service.deleteMovie(0L));
+	}
 }
