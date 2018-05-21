@@ -42,4 +42,10 @@ public class MovieServiceTest {
 		when(repo.getMovies()).thenReturn(movies);
 		assertEquals(movies, service.getMovies());
 	}
+	
+	@Test
+	public void getMovieTest() {
+		when(repo.getMovie(anyLong())).thenReturn(movies.get(0));
+		assertEquals(movies.get(0), service.getMovie(1L));
+	}
 }
