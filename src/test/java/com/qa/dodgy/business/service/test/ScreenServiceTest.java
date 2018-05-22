@@ -3,7 +3,9 @@ package com.qa.dodgy.business.service.test;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -49,6 +51,13 @@ public class ScreenServiceTest {
 		when(repo.deleteScreen(id)).thenReturn(screen).thenReturn(null);
 		assertEquals(screen, service.deleteScreen(0L));
 		assertEquals(null, service.deleteScreen(0L));
+	}
+	
+	@Test
+	public void getScreensTest() {
+		List<Screen> screens = new ArrayList<Screen>(screenDB.values());
+		when(repo.getScreens()).thenReturn(screens);
+		assertEquals(screens, service.getScreens());
 	}
 
 }
