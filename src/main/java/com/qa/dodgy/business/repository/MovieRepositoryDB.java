@@ -24,8 +24,8 @@ public class MovieRepositoryDB implements IMovieRepository {
 	}
 	
 	public Movie getMovie(Long id) {
-		Movie aMovie = findMovie(id);
-		return aMovie;
+		Movie movie = findMovie(id);
+		return movie;
 	}
 	
 	@Transactional

@@ -16,8 +16,8 @@ public class ShowingRepositoryDB implements IShowingRepository{
 	}
 	
 	public Showing getShowing(Long id) {
-		Showing aShowing = findShowing(id);
-		return aShowing;
+		Showing showing = findShowing(id);
+		return showing;
 	}
 	
 	@Transactional

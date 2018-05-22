@@ -16,8 +16,8 @@ public class SeatRepositoryDB implements ISeatRepository{
 	}
 	
 	public Seat getSeat(Long id) {
-		Seat aSeat = findSeat(id);
-		return aSeat;
+		Seat seat = findSeat(id);
+		return seat;
 	}
 	
 	@Transactional

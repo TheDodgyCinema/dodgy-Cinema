@@ -23,8 +23,8 @@ public class TicketService implements ITicketService {
 		return repo.deleteTicket(id);
 	}
 
-	public Ticket addTicket(Ticket aTicket) {
-		return repo.addTicket(aTicket);
+	public Ticket addTicket(Ticket ticket) {
+		return repo.addTicket(ticket);
 	};
 
 }
