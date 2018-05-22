@@ -15,9 +15,6 @@ public class SeatEndPoint {
 
 	@Inject
 	private ISeatService service;
-	
-	@Inject
-	private IJSONUtil jsonUtil;
 
 	@GET
 	@Path("/{id}")
