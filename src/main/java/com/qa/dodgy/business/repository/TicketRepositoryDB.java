@@ -1,15 +1,20 @@
 package com.qa.dodgy.business.repository;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import com.qa.dodgy.persistence.domain.Ticket;
+import com.qa.dodgy.util.JSONUtil;
 
 public class TicketRepositoryDB implements ITicketRepository {
 
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
+	
+	@Inject
+	private JSONUtil util;
 	
 	private Ticket findTicket(Long id) {
 		return manager.find(Ticket.class, id);
@@ -25,5 +30,9 @@ public class TicketRepositoryDB implements ITicketRepository {
 		Ticket ticketInDB = findTicket(id);
 		manager.remove(ticketInDB);
 		return ticketInDB;
+
+	public Ticket addTicket(Ticket aTicket) {
+		manager.persist(aTicket);
+		return getTicket(aTicket.getId());
 	}
 }

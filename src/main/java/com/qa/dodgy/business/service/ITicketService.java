@@ -11,4 +11,6 @@ public interface ITicketService {
 	
 	public Ticket deleteTicket(Long id);
 
+	public Ticket addTicket(Ticket aTicket);
+
 }

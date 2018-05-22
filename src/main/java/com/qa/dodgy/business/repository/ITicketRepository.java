@@ -8,4 +8,6 @@ public interface ITicketRepository {
 	
 	public Ticket deleteTicket(Long id);
 
+	public Ticket addTicket(Ticket ticket);
+
 }
