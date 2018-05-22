@@ -8,7 +8,6 @@ import javax.ws.rs.Produces;
 
 import com.qa.dodgy.business.service.ISeatService;
 import com.qa.dodgy.persistence.domain.Seat;
-import com.qa.dodgy.util.IJSONUtil;
 
 @Path("seat")
 public class SeatEndPoint {
