@@ -3,7 +3,9 @@ package com.qa.dodgy.business.service.test;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -52,6 +54,13 @@ public class SeatServiceTest {
 		when(repo.deleteSeat(id)).thenReturn(seat).thenReturn(null);
 		assertEquals(seat, service.deleteSeat(0L));
 		assertEquals(null, service.deleteSeat(0L));
+	}
+	
+	@Test
+	public void getSeatsTest() {
+		List<Seat> seats = new ArrayList<Seat>(seatDB.values());
+		when(repo.getSeats()).thenReturn(seats);
+		assertEquals(seats, service.getSeats());
 	}
 
 }

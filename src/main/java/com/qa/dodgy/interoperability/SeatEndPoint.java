@@ -9,12 +9,16 @@ import javax.ws.rs.Produces;
 
 import com.qa.dodgy.business.service.ISeatService;
 import com.qa.dodgy.persistence.domain.Seat;
+import com.qa.dodgy.util.IJSONUtil;
 
 @Path("seat")
 public class SeatEndPoint {
 
 	@Inject
 	private ISeatService service;
+	
+	@Inject
+	private IJSONUtil jsonUtil;
 
 	@GET
 	@Path("/{id}")
@@ -28,5 +32,11 @@ public class SeatEndPoint {
 	@Produces("application/json")
 	public Seat deleteSeat(@PathParam("id") Long id) {
 		return service.deleteSeat(id);
+	}
+	
+	@GET
+	@Produces("application/json")
+	public String getSeats() {
+		return jsonUtil.getJSONForObject(service.getSeats());
 	}
 }
