@@ -46,5 +46,14 @@ public class ShowingServiceTest {
 		when(repo.getShowing(id)).thenReturn(showing);
 		assertEquals(showingDB.get(id), service.getShowing(id));
 	}
+	
+	@Test
+	public void deleteShowingTest() {
+		long id = 0;
+		Showing showing = showingDB.get(id);
+		when(repo.deleteShowing(id)).thenReturn(showing).thenReturn(null);
+		assertEquals(showing, service.deleteShowing(0L));
+		assertEquals(null, service.deleteShowing(0L));
+	}
 
 }
