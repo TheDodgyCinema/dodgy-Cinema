@@ -3,7 +3,9 @@ package com.qa.dodgy.business.service.test;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -61,6 +63,13 @@ public class TicketServiceTest {
 		});
 		assertEquals(ticket, repo.addTicket(ticket));
 		assertEquals(dbSize + 1, ticketDB.size());
+	}
+	
+	@Test
+	public void getTicketsTest() {
+		List<Ticket> tickets = new ArrayList<Ticket>(ticketDB.values());
+		when(repo.getTickets()).thenReturn(tickets);
+		assertEquals(tickets, service.getTickets());
 	}
 
 }
