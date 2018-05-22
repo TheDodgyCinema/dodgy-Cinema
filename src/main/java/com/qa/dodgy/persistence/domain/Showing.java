@@ -26,6 +26,15 @@ public class Showing{
 	public Showing() {
 		super();
 	}
+	
+	public Showing(String startTime, String screenNumber, String dimension, Movie movie, Screen screen) {
+		super();
+		this.startTime = startTime;
+		this.screenNumber = screenNumber;
+		this.dimension = dimension;
+		this.movie = movie;
+		this.screen = screen;
+	}
 
 	public Long getId() {
 		return id;
