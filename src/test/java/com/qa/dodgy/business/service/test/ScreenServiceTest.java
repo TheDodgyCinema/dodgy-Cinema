@@ -41,5 +41,14 @@ public class ScreenServiceTest {
 		when(repo.getScreen(id)).thenReturn(screen);
 		assertEquals(screenDB.get(id), service.getScreen(id));
 	}
+	
+	@Test
+	public void deleteScreenTest() {
+		long id = 0;
+		Screen screen = screenDB.get(id);
+		when(repo.deleteScreen(id)).thenReturn(screen).thenReturn(null);
+		assertEquals(screen, service.deleteScreen(0L));
+		assertEquals(null, service.deleteScreen(0L));
+	}
 
 }
