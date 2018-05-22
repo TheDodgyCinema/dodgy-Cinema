@@ -19,4 +19,8 @@ public class SeatService implements ISeatService {
 	public void setRepo(ISeatRepository repo) {
 		this.repo = repo;	
 	}
+	
+	public Seat deleteSeat(Long id) {
+		return repo.deleteSeat(id);
+	}
 }

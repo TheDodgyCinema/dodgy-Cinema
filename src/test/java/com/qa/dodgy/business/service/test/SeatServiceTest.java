@@ -44,5 +44,14 @@ public class SeatServiceTest {
 		when(repo.getSeat(id)).thenReturn(seat);
 		assertEquals(seatDB.get(id), service.getSeat(id));
 	}
+	
+	@Test
+	public void deleteSeatTest() {
+		long id = 0;
+		Seat seat = seatDB.get(id);
+		when(repo.deleteSeat(id)).thenReturn(seat).thenReturn(null);
+		assertEquals(seat, service.deleteSeat(0L));
+		assertEquals(null, service.deleteSeat(0L));
+	}
 
 }

@@ -8,4 +8,6 @@ public interface ISeatService {
 public Seat getSeat(Long id);
 	
 	void setRepo(ISeatRepository repo);
+	
+	public Seat deleteSeat(Long id);
 }

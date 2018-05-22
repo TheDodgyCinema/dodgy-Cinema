@@ -6,4 +6,5 @@ public interface ISeatRepository {
 	
 	public Seat getSeat(Long id);
 
+	public Seat deleteSeat(Long id);
 }
