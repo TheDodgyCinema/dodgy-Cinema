@@ -25,5 +25,9 @@ public class TicketRepositoryDB implements ITicketRepository {
 		Ticket ticketInDB = findTicket(id);
 		manager.remove(ticketInDB);
 		return ticketInDB;
+
+	public Ticket addTicket(Ticket aTicket) {
+		manager.persist(aTicket);
+		return getTicket(aTicket.getId());
 	}
 }
