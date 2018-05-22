@@ -41,5 +41,14 @@ public class TicketServiceTest {
 		when(repo.getTicket(id)).thenReturn(ticket);
 		assertEquals(ticketDB.get(id), service.getTicket(id));
 	}
+	
+	@Test
+	public void deleteTicketTest() {
+		long id = 0;
+		Ticket ticket = ticketDB.get(id);
+		when(repo.deleteTicket(id)).thenReturn(ticket).thenReturn(null);
+		assertEquals(ticket, service.deleteTicket(0L));
+		assertEquals(null, service.deleteTicket(0L));
+	}
 
 }
