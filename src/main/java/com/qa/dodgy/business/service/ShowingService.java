@@ -1,5 +1,7 @@
 package com.qa.dodgy.business.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import com.qa.dodgy.business.repository.IShowingRepository;
@@ -9,6 +11,10 @@ public class ShowingService implements IShowingService{
 	
 	@Inject
 	private IShowingRepository repo;
+	
+	public List<Showing> getShowings() {
+		return repo.getShowings();
+	}
 	
 	public Showing getShowing(Long id) {
 		return repo.getShowing(id);
