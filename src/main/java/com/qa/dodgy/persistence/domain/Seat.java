@@ -23,6 +23,17 @@ public class Seat {
 		super();
 	}
 	
+	
+	public Seat(String seatNumber, String seatRow, String seatType, Screen screen) {
+		super();
+		this.seatNumber = seatNumber;
+		this.seatRow = seatRow;
+		this.seatType = seatType;
+		this.screen = screen;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}
