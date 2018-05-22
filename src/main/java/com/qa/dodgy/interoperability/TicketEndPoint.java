@@ -1,6 +1,7 @@
 package com.qa.dodgy.interoperability;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -20,5 +21,12 @@ public class TicketEndPoint {
 		@Produces("application/json")
 		public Ticket getTicket(@PathParam("id") Long id) {
 			return service.getTicket(id);
+		}
+		
+		@DELETE
+		@Path("/{id}")
+		@Produces("application/json")
+		public Ticket deleteTicket(@PathParam("id") Long id) {
+			return service.deleteTicket(id);
 		}
 }

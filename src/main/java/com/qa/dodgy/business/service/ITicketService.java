@@ -8,5 +8,7 @@ public interface ITicketService {
 	public Ticket getTicket(Long id);
 	
 	void setRepo(ITicketRepository repo);
+	
+	public Ticket deleteTicket(Long id);
 
 }

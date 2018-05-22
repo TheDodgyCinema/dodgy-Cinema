@@ -2,6 +2,8 @@ package com.qa.dodgy.business.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
 import com.qa.dodgy.persistence.domain.Ticket;
 
 public class TicketRepositoryDB implements ITicketRepository {
@@ -16,5 +18,12 @@ public class TicketRepositoryDB implements ITicketRepository {
 	public Ticket getTicket(Long id) {
 		Ticket aTicket = findTicket(id);
 		return aTicket;
+	}
+	
+	@Transactional
+	public Ticket deleteTicket(Long id) {
+		Ticket ticketInDB = findTicket(id);
+		manager.remove(ticketInDB);
+		return ticketInDB;
 	}
 }
