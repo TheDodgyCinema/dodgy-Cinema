@@ -2,6 +2,7 @@ package com.qa.dodgy.business.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import com.qa.dodgy.persistence.domain.Showing;
 
@@ -17,5 +18,12 @@ public class ShowingRepositoryDB implements IShowingRepository{
 	public Showing getShowing(Long id) {
 		Showing aShowing = findShowing(id);
 		return aShowing;
+	}
+	
+	@Transactional
+	public Showing deleteShowing(Long id) {
+		Showing showingInDB = findShowing(id);
+		manager.remove(showingInDB);
+		return showingInDB;
 	}
 }

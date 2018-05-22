@@ -10,5 +10,7 @@ public interface IShowingService {
 	public Showing getShowing(Long id);
 	
 	void setRepo(IShowingRepository repo);
+	
+	public Showing deleteShowing(Long id);
 
 }
