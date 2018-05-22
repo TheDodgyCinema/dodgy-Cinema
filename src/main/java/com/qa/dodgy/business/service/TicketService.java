@@ -1,8 +1,11 @@
 package com.qa.dodgy.business.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import com.qa.dodgy.business.repository.ITicketRepository;
+import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Ticket;
 
 public class TicketService implements ITicketService {
@@ -25,6 +28,10 @@ public class TicketService implements ITicketService {
 
 	public Ticket addTicket(Ticket ticket) {
 		return repo.addTicket(ticket);
-	};
+	}
+	
+	public List<Ticket> getTickets() {
+		return repo.getTickets();
+	}
 
 }

@@ -9,12 +9,16 @@ import javax.ws.rs.Produces;
 
 import com.qa.dodgy.business.service.ITicketService;
 import com.qa.dodgy.persistence.domain.Ticket;
+import com.qa.dodgy.util.IJSONUtil;
 
 @Path("ticket")
 public class TicketEndPoint {
 		
 		@Inject
 		private ITicketService service;
+		
+		@Inject
+		private IJSONUtil jsonUtil;
 		
 		@GET
 		@Path("/{id}")
@@ -28,5 +32,11 @@ public class TicketEndPoint {
 		@Produces("application/json")
 		public Ticket deleteTicket(@PathParam("id") Long id) {
 			return service.deleteTicket(id);
+		}
+		
+		@GET
+		@Produces("application/json")
+		public String getTickets() {
+			return jsonUtil.getJSONForObject(service.getTickets());
 		}
 }

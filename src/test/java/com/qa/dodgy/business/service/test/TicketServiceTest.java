@@ -69,7 +69,7 @@ public class TicketServiceTest {
 	@Test
 	public void getTicketsTest() {
 		List<Ticket> tickets = new ArrayList<Ticket>(ticketDB.values());
-		when(repo.getTicket()).thenReturn(tickets);
+		when(repo.getTickets()).thenReturn(tickets);
 		assertEquals(tickets, service.getTickets());
 	}
 
