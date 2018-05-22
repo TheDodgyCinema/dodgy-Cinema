@@ -27,8 +27,11 @@ public class TicketRepositoryDB implements ITicketRepository {
 		return ticketInDB;
 	}
 
+	@Transactional
 	public Ticket addTicket(Ticket ticket) {
 		manager.persist(ticket);
 		return getTicket(ticket.getId());
 	}
+
+	
 }

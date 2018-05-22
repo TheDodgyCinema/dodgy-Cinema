@@ -25,6 +25,6 @@ public class TicketService implements ITicketService {
 
 	public Ticket addTicket(Ticket ticket) {
 		return repo.addTicket(ticket);
-	};
+	}
 
 }
