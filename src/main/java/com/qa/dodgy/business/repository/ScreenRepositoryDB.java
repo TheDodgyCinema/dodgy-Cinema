@@ -16,8 +16,8 @@ public class ScreenRepositoryDB implements IScreenRepository {
 	}
 	
 	public Screen getScreen(Long id) {
-		Screen aScreen = findScreen(id);
-		return aScreen;
+		Screen screen = findScreen(id);
+		return screen;
 	}
 	
 	@Transactional

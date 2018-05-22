@@ -49,6 +49,7 @@ public class TicketServiceTest {
 		when(repo.deleteTicket(id)).thenReturn(ticket).thenReturn(null);
 		assertEquals(ticket, service.deleteTicket(0L));
 		assertEquals(null, service.deleteTicket(0L));
+	}
 
 	public void addTicketTest() {
 		int dbSize = ticketDB.size();
