@@ -18,5 +18,9 @@ public class ShowingService implements IShowingService{
 	public void setRepo(IShowingRepository repo) {
 		this.repo = repo;	
 	}
+	
+	public Showing deleteShowing(Long id) {
+		return repo.deleteShowing(id);
+	}
 
 }

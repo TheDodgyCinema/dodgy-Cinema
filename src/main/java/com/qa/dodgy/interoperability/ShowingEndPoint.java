@@ -1,6 +1,7 @@
 package com.qa.dodgy.interoperability;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -20,6 +21,13 @@ public class ShowingEndPoint {
 	@Produces("application/json")
 	public Showing getShowing(@PathParam("id") Long id) {
 		return service.getShowing(id);
+	}
+	
+	@DELETE
+	@Path("/{id}")
+	@Produces("application/json")
+	public Showing deleteShowing(@PathParam("id") Long id) {
+		return service.deleteShowing(id);
 	}
 
 }
