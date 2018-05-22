@@ -18,5 +18,9 @@ public class ScreenService implements IScreenService {
 	public Screen getScreen(Long id) {
 		return repo.getScreen(id);
 	}
+	
+	public Screen deleteScreen(Long id) {
+		return repo.deleteScreen(id);
+	}
 
 }
