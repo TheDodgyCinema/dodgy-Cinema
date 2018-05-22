@@ -16,7 +16,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.qa.dodgy.business.repository.TicketRepositoryDB;
 import com.qa.dodgy.business.service.TicketService;
-import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Ticket;
 
 @RunWith(MockitoJUnitRunner.class)

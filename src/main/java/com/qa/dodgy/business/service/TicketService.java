@@ -5,7 +5,6 @@ import java.util.List;
 import javax.inject.Inject;
 
 import com.qa.dodgy.business.repository.ITicketRepository;
-import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Ticket;
 
 public class TicketService implements ITicketService {
