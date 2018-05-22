@@ -1,12 +1,10 @@
 package com.qa.dodgy.business.repository;
 
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import com.qa.dodgy.persistence.domain.Ticket;
-import com.qa.dodgy.util.JSONUtil;
 
 public class TicketRepositoryDB implements ITicketRepository {
 
