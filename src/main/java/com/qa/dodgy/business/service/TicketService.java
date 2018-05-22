@@ -18,5 +18,9 @@ public class TicketService implements ITicketService {
 	public void setRepo(ITicketRepository repo) {
 		this.repo = repo;	
 	}
+	
+	public Ticket deleteTicket(Long id) {
+		return repo.deleteTicket(id);
+	}
 
 }
