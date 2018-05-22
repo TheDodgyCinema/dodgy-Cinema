@@ -16,7 +16,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.qa.dodgy.business.repository.SeatRepositoryDB;
 import com.qa.dodgy.business.service.SeatService;
-import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Screen;
 import com.qa.dodgy.persistence.domain.Seat;
 
