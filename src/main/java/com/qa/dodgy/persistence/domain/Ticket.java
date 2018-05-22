@@ -21,7 +21,7 @@ public class Ticket {
 	public Ticket() {
 		super();
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -41,7 +41,6 @@ public class Ticket {
 	public void setSeat(Seat seat) {
 		this.seat = seat;
 	}
-
 }
 
 
