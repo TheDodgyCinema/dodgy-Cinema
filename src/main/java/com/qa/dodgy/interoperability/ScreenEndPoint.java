@@ -1,6 +1,7 @@
 package com.qa.dodgy.interoperability;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -20,6 +21,13 @@ public class ScreenEndPoint {
 	@Produces("application/json")
 	public Screen getScreen(@PathParam("id") Long id) {
 		return service.getScreen(id);
+	}
+	
+	@DELETE
+	@Path("/{id}")
+	@Produces("application/json")
+	public Screen deleteScreen(@PathParam("id") Long id) {
+		return service.deleteScreen(id);
 	}
 
 }

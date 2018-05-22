@@ -8,5 +8,7 @@ public interface IScreenService {
 	public Screen getScreen(Long id);
 	
 	void setRepo(IScreenRepository repo);
+	
+	public Screen deleteScreen(Long id);
 
 }
