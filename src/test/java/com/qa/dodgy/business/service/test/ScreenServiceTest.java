@@ -14,7 +14,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.qa.dodgy.business.repository.ScreenRepositoryDB;
 import com.qa.dodgy.business.service.ScreenService;
-import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Screen;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -24,7 +23,7 @@ public class ScreenServiceTest {
 	private ScreenService service = new ScreenService();
 	
 	@Mock
-	private ScrenRepositoryDB repo = new ScreenRepositoryDB();
+	private ScreenRepositoryDB repo = new ScreenRepositoryDB();
 	
 	private HashMap<Long, Screen> screenDB = new HashMap<Long, Screen>();
 	
@@ -38,7 +37,7 @@ public class ScreenServiceTest {
 	@Test
 	public void getScreenTest() {
 		long id = 0;
-		Movie screen = screenDB.get(id);
+		Screen screen = screenDB.get(id);
 		when(repo.getScreen(id)).thenReturn(screen);
 		assertEquals(screenDB.get(id), service.getScreen(id));
 	}

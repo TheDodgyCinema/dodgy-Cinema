@@ -17,6 +17,13 @@ public class Screen {
 	public Screen() {
 		super();
 	}
+	
+	public Screen(String numberofSeats, String screenNumber, String screenType) {
+		super();
+		this.numberofSeats = numberofSeats;
+		this.screenNumber = screenNumber;
+		this.screenType = screenType;
+	}
 
 	public Long getId() {
 		return id;
