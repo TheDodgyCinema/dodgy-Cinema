@@ -12,6 +12,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import com.qa.dodgy.business.repository.ShowingRepositoryDB;
+import com.qa.dodgy.business.service.ShowingService;
 import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Screen;
 import com.qa.dodgy.persistence.domain.Showing;
