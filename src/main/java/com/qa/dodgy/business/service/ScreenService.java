@@ -1,5 +1,7 @@
 package com.qa.dodgy.business.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import com.qa.dodgy.business.repository.IScreenRepository;
@@ -9,6 +11,10 @@ public class ScreenService implements IScreenService {
 	
 	@Inject
 	private IScreenRepository repo;
+	
+	public List<Screen> getScreens() {
+		return repo.getScreens();
+	}
 
 	@Override
 	public void setRepo(IScreenRepository repo) {
