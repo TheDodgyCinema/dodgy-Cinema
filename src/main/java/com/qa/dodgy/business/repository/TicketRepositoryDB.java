@@ -13,9 +13,6 @@ public class TicketRepositoryDB implements ITicketRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
 	
-	@Inject
-	private JSONUtil util;
-	
 	private Ticket findTicket(Long id) {
 		return manager.find(Ticket.class, id);
 	}
