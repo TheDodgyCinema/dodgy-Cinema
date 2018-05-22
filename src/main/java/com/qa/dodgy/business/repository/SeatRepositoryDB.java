@@ -2,6 +2,7 @@ package com.qa.dodgy.business.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import com.qa.dodgy.persistence.domain.Seat;
 
@@ -17,5 +18,12 @@ public class SeatRepositoryDB implements ISeatRepository{
 	public Seat getSeat(Long id) {
 		Seat aSeat = findSeat(id);
 		return aSeat;
+	}
+	
+	@Transactional
+	public Seat deleteSeat(Long id) {
+		Seat seatInDB = findSeat(id);
+		manager.remove(seatInDB);
+		return seatInDB;
 	}
 }
