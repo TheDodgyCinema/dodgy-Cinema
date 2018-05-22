@@ -7,7 +7,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
-import com.qa.dodgy.persistence.domain.Movie;
 import com.qa.dodgy.persistence.domain.Showing;
 
 public class ShowingRepositoryDB implements IShowingRepository{
