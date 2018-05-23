@@ -29,11 +29,20 @@ public class Movie {
 	private String director;
 	private String actors;
 	private String reviews;
+	private String posterUrl;
 	
 	public Movie() {
 		super();
 	}
 	
+	public String getPosterUrl() {
+		return posterUrl;
+	}
+
+	public void setPosterUrl(String posterUrl) {
+		this.posterUrl = posterUrl;
+	}
+
 	public Long getId() {
 		return id;
 	}
