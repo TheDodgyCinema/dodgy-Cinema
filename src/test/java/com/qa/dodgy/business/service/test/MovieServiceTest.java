@@ -33,8 +33,8 @@ public class MovieServiceTest {
 	@Before
 	public void setUp() {
 		service.setRepo(repo);
-		movieDB.put(0L, new Movie("Under the Skin", "15", "None", "2014", "Jonathan Glazer", "Scarlett Johansson", "Good"));
-		movieDB.put(1L, new Movie("La Haine", "18", "English", "1996", "Mathieu Kassovitz", "Vincent Cassel", "Excellent"));
+		movieDB.put(0L, new Movie("Under the Skin", "15", false, "2014", "Jonathan Glazer", "Scarlett Johansson", "Good" ));
+		movieDB.put(1L, new Movie("La Haine", "18", true, "1996", "Mathieu Kassovitz", "Vincent Cassel", "Excellent"));
 	}
 
 	@Test
