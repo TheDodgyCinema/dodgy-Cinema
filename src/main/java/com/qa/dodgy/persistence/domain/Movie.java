@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Movie {
 
-	public Movie(String title, String rating, String subtitles, String releaseYear, String director, String actors,
+	public Movie(String title, String rating, Boolean subtitles, String releaseYear, String director, String actors,
 			String reviews) {
 		
 		this.title = title;
@@ -24,7 +24,7 @@ public class Movie {
 	private Long id;
 	private String title;
 	private String rating;
-	private String subtitles;
+	private Boolean subtitles;
 	private String releaseYear;
 	private String director;
 	private String actors;
@@ -63,11 +63,11 @@ public class Movie {
 		this.rating = rating;
 	}
 
-	public String getSubtitles() {
+	public Boolean getSubtitles() {
 		return subtitles;
 	}
 
-	public void setSubtitles(String subtitles) {
+	public void setSubtitles(Boolean subtitles) {
 		this.subtitles = subtitles;
 	}
 
