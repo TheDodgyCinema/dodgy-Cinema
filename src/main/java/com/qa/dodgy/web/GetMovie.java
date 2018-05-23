@@ -16,7 +16,7 @@ import com.qa.dodgy.persistence.domain.Movie;
 @WebServlet(name = "GetMovie", urlPatterns = {"/movie"})
 public class GetMovie extends HttpServlet {
 	@Inject
-	IMovieRepository repo;
+	private IMovieRepository repo;
 	
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
