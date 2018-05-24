@@ -22,8 +22,7 @@ public class OmdbWebServiceClient implements IOmdbWebServiceClient {
 	private static final String omdbApiUrl = "http://www.omdbapi.com/";
 	private static final String apiKey = "438c7ffb";
 	
-	@Inject
-	private IJSONUtil jsonUtil;
+	private IJSONUtil jsonUtil = new JSONUtil();
 	
 	private String constructRequestUrl(Map<String, String> params) {
 		String requestUrl = String.format("%s?apikey=%s", omdbApiUrl, apiKey);
