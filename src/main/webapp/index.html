@@ -146,7 +146,7 @@
                 var rating = document.createTextNode(movie.rating);
                 ratingH6.appendChild(rating);
                 var imageHref = document.createElement("a");
-                imageHref.setAttribute('href', "individualmovie.html");
+                imageHref.setAttribute('href', `movie?movieId=${movie.id}`);
                 var button = document.createElement("button");
                 button.classList.add("button");
                 var imageImg = document.createElement("img");
@@ -179,7 +179,7 @@
                 var qaDiv = document.createElement("div");
                 qaDiv.setAttribute("id", "qa");
                 var imageHref = document.createElement("a");
-                imageHref.setAttribute('href', "individualmovie.html");
+                imageHref.setAttribute('href', `movie?movieId=${movie.id}`);
                 var movieImg = document.createElement("img");
                 movieImg.setAttribute('src', ""+movie.posterUrl+"");
                 movieImg.setAttribute('height', "200");
