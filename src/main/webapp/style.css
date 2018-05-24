@@ -1,0 +1,42 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+ background-image: url("images/holi.jpg");
+
+}
+
+
+
+
+.gallery_container #gallery{
+	 display: inline-block; 
+    margin:50px;
+    text-align: center;
+
+
+}
+
+
+
+
+
+#gallery {
+	width: 200px;
+	height: 400px;
+	background-color: #000;
+	color: #fff;
+
+}
+
+
+
+.gallery_container #qa{
+	 display: inline-block; 
+    margin:50px;
+    text-align: center;
+
+
+}
+

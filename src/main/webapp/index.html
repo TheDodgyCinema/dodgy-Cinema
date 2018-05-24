@@ -1,12 +1,204 @@
 <html>
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color:  #FFDAB9;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+        #miragex {
+            opacity: 0.9;
+        }
+        div.footer {
+            position: relative;
+            left: 1725px;
+            top: 25px;
+        }
+        .button {
+            background-color: gray;
+            border: none;
+            color: #FFDAB9;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="qunit-2.4.1.css">
+    <script src="typeit.js"></script>
+
+    <div id="qunit-fixture"></div>
+    <script src="qunit-2.4.1.js"></script>
+    <script src="tests.js"></script>
+    <script src="typeit.js"></script>
+
+    <!-- Bootstrap core JavaScript
+   ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<center><img src="images/miragex.jpg" height="275" width="100%" id="miragex"></center>
+
+
+<!-- NAVBAR
+================================================== -->
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="whatson.html">What's On</a></li>
+    <li><a href="aboutus.html">About Us</a></li>
+    <li><a href="placestogo.html">Places To Go</a></li>
+</ul>
+
+</div>
+
+<br><br><br>
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+
+    <div class="carousel-inner" role="listbox" id="b">
+
+        <div class="item active">
+            <img  src="images/bk.jpg"  width="100%" style="opacity: 0.4;">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="gallery_containerx">
+
+
+                        <div id="qa">
+                            <a href="individualmovie.html">
+                                <img src="images/Padmaavat.jpg" height="200" width="150">
+                                <h5>ooooo</h5>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div><!-- /.carousel -->
+</div>
+
+<div class="gallery_container">
+
+
+    <div id="a" ></div>
+
+</div>
+
 <script>
     var requestURL = 'http://miragecinema.co.uk/dodgy-cinema/api/movie';
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var movies = xhttp.response;
-            for (movie of movies){
-            document.getElementById("demo").innerHTML += movie.title;
+            for (i=0;i<movies.length;i++){
+                var movie = movies[i];
+                //document.getElementById("a").innerHTML += movie[i].title;
+                var titleH5 = document.createElement("h5");
+                var title = document.createTextNode(movie.title);
+                titleH5.appendChild(title);
+                var ratingH6 = document.createElement("h6");
+                var rating = document.createTextNode(movie.rating);
+                ratingH6.appendChild(rating);
+                var imageHref = document.createElement("a");
+                imageHref.setAttribute('href', `movie?movieId=${movie.id}`);
+                var button = document.createElement("button");
+                button.classList.add("button");
+                var imageImg = document.createElement("img");
+                imageImg.setAttribute('src', ""+movie.posterUrl+"");
+                imageImg.setAttribute('height', "300");
+                imageImg.setAttribute('width', "200");
+                var titleDiv = document.createElement("div");
+                titleDiv.setAttribute("id", "gallery");
+                titleDiv.appendChild(imageImg);
+                titleDiv.appendChild(titleH5);
+                titleDiv.appendChild(ratingH6);
+                titleDiv.appendChild(imageHref);
+                imageHref.appendChild(button);
+                button.append("Book Now");
+                var gallery = document.getElementById("a");
+                gallery.appendChild(titleDiv);
+            }
+            for (i=0;i<movies.length;i++){
+                var movie = movies[i];
+                var imageImg = document.createElement("img");
+                imageImg.setAttribute('src', "images/bk.jpg");
+                imageImg.setAttribute('width', "100%");
+                imageImg.setAttribute('style', "opacity: 0.4;");
+                var containerDiv = document.createElement("div");
+                containerDiv.classList.add("container");
+                var captionDiv = document.createElement("div");
+                captionDiv.classList.add("carousel-caption");
+                var galleryDiv = document.createElement("div");
+                galleryDiv.classList.add("gallery_containerx");
+                var qaDiv = document.createElement("div");
+                qaDiv.setAttribute("id", "qa");
+                var imageHref = document.createElement("a");
+                imageHref.setAttribute('href', `movie?movieId=${movie.id}`);
+                var movieImg = document.createElement("img");
+                movieImg.setAttribute('src', ""+movie.posterUrl+"");
+                movieImg.setAttribute('height', "200");
+                movieImg.setAttribute('width', "150");
+                var titleH5 = document.createElement("h5");
+                var title = document.createTextNode(movie.title);
+                titleH5.appendChild(title);
+                var titleDiv = document.createElement("div");
+                titleDiv.classList.add("item");
+                titleDiv.appendChild(imageImg);
+                titleDiv.appendChild(containerDiv);
+                containerDiv.appendChild(captionDiv);
+                captionDiv.appendChild(galleryDiv);
+                galleryDiv.appendChild(qaDiv);
+                qaDiv.appendChild(imageHref);
+                imageHref.appendChild(movieImg);
+                imageHref.appendChild(titleH5);
+                var gallery = document.getElementById("b");
+                gallery.appendChild(titleDiv);
             }
         }
     };
@@ -14,7 +206,18 @@
     xhttp.responseType = 'json';
     xhttp.send();
 </script>
-<body>
-    <p id="demo">x</p>
+</div>
+
+</div>
+
 </body>
+
+
+
+<footer>
+    <div class="footer">
+        <a href="aboutus.html"><button type="button" >Contact Us</button></a>
+    </div>
+    <h5>Copyright Infosys Cinemas</h5>
+</footer>
 </html>
