@@ -75,6 +75,16 @@ li a:hover {
     
      <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
+    
+    <!-- NAVBAR
+================================================== -->
+      <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">What's On</a></li>
+  <li><a href="#contact">About Us</a></li>
+  <li><a href="#about">Places To Go</a></li>
+  </ul>
+</body>
 
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -98,15 +108,12 @@ li a:hover {
 <p>${movie.director}</p>
 <p>${movie.actors}</p>
 <p>${movie.actors}</p>
+
+<li><a href="2DTicketBooking.html">Showing Time: 14:30. 2D</a></li>
+<li><a href="3DTicketBooking.html">Showing Time: 16:30. 3D</a></li>
+<li><a href="2DTicketBooking.html">Showing Time: 18:30. 2D</a></li>
+<li><a href="ImaxTicketBooking.html">Showing Time: 20:30. Imax</a></li>
 </center>
 
-<!-- NAVBAR
-================================================== -->
-      <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">What's On</a></li>
-  <li><a href="#contact">About Us</a></li>
-  <li><a href="#about">Places To Go</a></li>
-  </ul>
-</body>
+
 </html>

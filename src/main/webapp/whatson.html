@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Ticket Booking</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="qunit-2.4.1.css">
+     
+    <div id="qunit-fixture"></div>
+    <script src="qunit-2.4.1.js"></script>
+    <script src="tests.js"></script>
+    <script src="typeit.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+      <style>
+          
+    .bookingimage {
+      
+      height: Auto;
+      padding: 50px;
+      } 
+      
+    .fontColor {
+      
+      color: whitesmoke;
+      } 
+          
+          .footerstyle{
+              padding-bottom: 25px
+          }
+      
+      </style>
+      
+      
+  </head>
+
+  <body>
+      
+      <center><img src="images/miragex.jpg" height="275" width="100%" id="miragex"></center>
+
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="index.html">The Mirage</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+
+    <li ><a href="index.html">Home</a></li>
+    <li class="active"><a href="whatson.html">What's On</a></li>
+    <li><a href="placestogo.html">Places To Go</a></li>
+    <li><a href="aboutus.html">About Us</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br><br><br>
+
+  <div class="row">
+    <div class="col-sm-12 bookingimage">
+            <p style="float: left;"><img src="images/Raid.jpg" height="175" width="150"></p>
+            <p id ="viewone"></p>
+            
+        </div>       
+      </div>
+      
+      <script> 
+         
+     var requestURL = 'http://52.56.36.69:8080/dodgy-cinema/api/movie/1';
+
+     var get = new XMLHttpRequest();
+
+     get.open('GET', requestURL);
+
+     get.responseType = 'json';
+
+     get.send();
+    
+     function getMovie() {
+
+     var movie = get.response;
+        
+     console.log(movie)
+        
+     for (i = 0; i < movie.length; i++) {
+            
+         document.getElementById("viewone").innerHTML += "  Title: " + movie.title + "  Rating: " + movie.rating + "  Subtitles: " + movie.subtitles + 
+    "  Release Year: " + movie.releaseYear + "  Reviews: " + movie.reviews + "<br>";
+        }
+     }         
+     </script> 
+     
+</body>
+    <footer class="container-fluid footerstyle text-right">
+   <button type="button" class="btn btn-primary">Contact Us</button>
+</footer>
+    
+</html>

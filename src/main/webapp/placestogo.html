@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Local Places</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <title>Place searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="whatson.html">What's On</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="placestogo.html">Places To Go</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="grid">
+            <div class="col-lg-4" ;>
+                <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\DeliFresh.jpg" alt="DeliFresh" style="width:325px;height:325px;">
+            </div>
+            <div class="col-lg-4" ;>
+                <p>
+                    DeliFresh Salad Bar offers an exciting Healthy Option. With a unique concept to create your very own Salad, there are endless combinations for a healthy tasty lunch you can never get tired of.</p>
+
+                <p>Trams run every 12 minutes between the Cornbrook and MediaCityUK Manchester stops from 7.15am to 8pm, Monday to Friday and from 9.30am to 6pm on Saturdays. The Eccles line service also stops at Broadway and Harbour City during these times. Outside these times, Eccles line trams call at the MediaCityUK Manchester stop, during normal tram operating times. When the shuttle is running, this means that there is a 6 minute service between Cornbrook and Harbour City</p>
+
+                <p/>
+            </div>
+            <div class="col-lg-4" ;>
+                <div class="img-rounded" id="map" style="width:325px;height:325px;background:yellow"></div>
+
+            </div>
+            <div class="grid">
+                <div class="col-lg-4" ;>
+                    <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Beefeater.jpg" alt="DeliFresh" style="width:325px;height:325px;">
+                </div>
+                <div class="col-lg-4" ;>
+                    <p>
+                        Beefeater opened their doors back in 1974, and were driven by a passion for glorious steak. Mouth-watering cuts at mouth-watering prices was their motto. Reassuringly nothing's changed, these things still drive them today and they always will. Beefeater believe in two things, a warm friendly welcome and serving incredible steak that you can kick back, relax and enjoy. Whether you're celebrating after a visit to Old Trafford or relaxing from a busy day shopping at the Lowry or Trafford Centre, the Quay House is the ideal restaurant for all occasions</p>
+                </div>
+                <div class="col-lg-4" ;>
+                    <div class="img-rounded" id="map2" style="width:325px;height:325px;background:yellow"></div>
+
+                </div>
+
+                <div class="grid">
+                    <div class="col-lg-4" ;>
+                        <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Subway.jpg" alt="Subway" style="width:325px;height:325px;">
+                    </div>
+                    <div class="col-lg-4" ;>
+
+                        <p>Subway is an American privately held fast food restaurant franchise that primarily sells submarine sandwiches (subs) and salads. Subway is one of the fastest-growing franchises in the world and, as of June 2017, has approximately 45,000 stores located in more than 100 countries. More than half of the stores are located in the United States. It is the largest single-brand restaurant chain and the largest restaurant operator in the world.
+
+                        </p>
+                    </div>
+                    <div class="col-lg-4" ;>
+                        <div class="img-rounded" id="map3" style="width:325px;height:325px;background:yellow"></div>
+
+                    </div>
+
+                    <div class="grid">
+                        <div class="col-lg-4" ;>
+                            <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Cau.jpg" alt="DeliFresh" style="width:325px;height:325px;">
+                        </div>
+                        <div class="col-lg-4" ;>
+                            <p>
+                                'When we started CAU, our vision was to create a restaurant that would fit perfectly in the heart of Palermo, Buenos Aires. If we could replicate that spirit, vitality, passion and sense of fun, we knew CAU would become a home from home for our diners.</p>
+
+                            <p>'As for our menu, Buenos Aires cuisine is a melting pot of delicious comfort food inspired by Italy, Spain and Argentina. From the mouth-watering steaks, burgers and sandwiches, to the tempting selection of sides and moreish favourites, each dish is served up with its own distinctive Argentinian twist.'</p>
+                        </div>
+                        <div class="col-lg-4" ;>
+                            <div class="img-rounded" id="map4" style="width:325px;height:325px;background:yellow"></div>
+
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-lg-4" ;>
+                                <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Marco.jpg" alt="Marco" style="width:325px;height:325px;">
+                            </div>
+                            <div class="col-lg-4" ;>
+                                <p>
+                                    Marco’s New York Italian from celebrity chef Marco Pierre White, offers casual, comfortable dining for every occasion. The MediaCityUK team pride themselves on offering friendly, approachable service that makes every meal memorable. Leather booths, funky comfortable chairs, crazy light fittings and stylish tableware all add to the laid back dining experience. Expect to taste the rock star chef’s Italian heritage with wholesome rustic dishes, all with a larger than life New York twist. Think big crispy pizza’s, fresh fish, succulent steaks and tantalising desserts all showcasing the very best fresh ingredients. Marco’s celebrates the joy of eating, be it lunch, dinner or Afternoon Tea! The venue is located on the Mezzanine floor inside the Holiday Inn MediaCityUK a short stroll from the Lowry Theatre, Old Trafford and Salford Quays or a few tram stops out of Manchester City centre.</p>
+                            </div>
+                            <div class="col-lg-4" ;>
+                                <div class="img-rounded" id="map5" style="width:325px;height:325px;background:yellow"></div>
+
+                            </div>
+
+                            </center>
+                            <script>
+                                function myMap() {
+                                    var mapOptions = {
+                                        center: new google.maps.LatLng(53.4708167, -2.293165799999997),
+                                        zoom: 15,
+
+                                        mapTypeId: google.maps.MapTypeId.Map
+                                    }
+
+                                    var mapOptions2 = {
+                                        center: new google.maps.LatLng(53.4714085, -2.2880198999999948),
+                                        zoom: 17,
+
+                                        mapTypeId: google.maps.MapTypeId.MAP
+
+                                    }
+
+                                    var mapOptions3 = {
+                                        center: new google.maps.LatLng(53.4712569, -2.2920994999999493),
+                                        zoom: 15,
+
+                                        mapTypeId: google.maps.MapTypeId.MAP
+
+                                    }
+
+                                    var mapOptions4 = {
+                                        center: new google.maps.LatLng(53.47282999999999, -2.2968980000000556),
+                                        zoom: 20,
+
+                                        mapTypeId: google.maps.MapTypeId.MAP
+
+                                    }
+
+                                    var mapOptions5 = {
+                                        center: new google.maps.LatLng(53.473326, -2.299319299999979),
+                                        zoom: 20,
+
+                                        mapTypeId: google.maps.MapTypeId.MAP
+
+                                    }
+
+                                    var mapOptions6 = {
+                                        center: new google.maps.LatLng(53.47282999999999, -2.2968980000000556),
+                                        zoom: 20,
+
+                                        mapTypeId: google.maps.MapTypeId.MAP
+
+                                    }
+
+                                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                                    var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions2);
+                                    var map3 = new google.maps.Map(document.getElementById("map3"), mapOptions3);
+                                    var map4 = new google.maps.Map(document.getElementById("map4"), mapOptions4);
+                                    var map5 = new google.maps.Map(document.getElementById("map5"), mapOptions5);
+                                    var map6 = new google.maps.Map(document.getElementById("map6"), mapOptions6);
+
+                                }
+                            </script>
+                            <div></div>
+
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC86ynQrvpUvDHzlAR0MlJPmbQjXxB9Dug&callback=myMap"></script>
+</body>
+
+</html>
