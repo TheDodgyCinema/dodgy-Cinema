@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Ticket Booking</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="qunit-2.4.1.css">
+     
+    <div id="qunit-fixture"></div>
+    <script src="qunit-2.4.1.js"></script>
+    <script src="tests.js"></script>
+    <script src="typeit.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      
+      <script>
+      $(function() { 
+    $('#ticket1').change(function() {
+         $('#subtotal1').val($(this).val());
+    }).change();
+});
+      </script>
+      
+      <script>
+      $(function() { 
+    $('#ticket2').change(function() {
+         $('#subtotal2').val($(this).val());
+    }).change();
+});
+      </script>
+      
+      <script>
+      $(function() { 
+    $('#ticket3').change(function() {
+         $('#subtotal3').val($(this).val());
+    }).change();
+});
+      </script>
+      
+      <script>
+      $(function() { 
+    $('#ticket4').change(function() {
+         $('#subtotal4').val($(this).val());
+    }).change();
+});
+      </script>
+
+      <script>
+      $(function() { 
+    $('#ticket5').change(function() {
+         $('#subtotal5').val($(this).val());
+    }).change();
+});
+      </script>
+
+      <script>
+      $(function() { 
+    $('#ticket6').change(function() {
+         $('#subtotal6').val($(this).val());
+    }).change();
+});
+      </script>
+
+    <link href="style.css" rel="stylesheet">
+      
+      
+      <style>
+          
+    .bookingimage {
+      
+      height: Auto;
+      padding: 50px;
+      } 
+          
+    .footerstyle{
+      padding-bottom: 20px;
+      }
+      
+      </style>
+      
+      
+  </head>
+
+  <body>
+      
+      <center><img src="images/miragex.jpg" height="275" width="100%" id="miragex"></center>
+
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="index.html">The Mirage</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+
+    <li><a href="index.html">Home</a></li>    
+    <li><a href="whatson.html">What's On</a></li>
+    <li><a href="placestogo">Places To Go</a></li>      
+    <li><a href="aboutus.html">About Us</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br><br><br>
+
+  <center><h1> Ticket Booking </h1></center>
+  <div class="row">
+    <div class="col-sm-12 bookingimage">
+            <p style="float: left;"><img src="images/Raid.jpg" height="175" width="150"></p>
+            <h3> 
+                (2D) Raid 12A                 
+            </h3>
+            <h4>
+         Screen 1  16 March 2018 Runtime: 2h 2min  
+        </h4>
+        </div>       
+      </div>
+      
+      <div class="col-sm-12 text-left"> 
+      <h1>Choose Your Tickets</h1>
+      
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>2D Regular Seat</th>
+        <th>Quantity</th>
+        <th>Sub-Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adult</td>
+        <td>£12</td>
+        <td>
+          
+    <select name="ticket" id="ticket1">
+    <option value="£0">0</option>
+    <option value="£12">1</option>
+    <option value="£24">2</option>
+    <option value="£36">3</option>
+    <option value="£48">4</option>
+    <option value="£60">5</option>
+    </select>          
+        </td>
+        <td><input id="subtotal1" disabled type="text" /></td>
+      </tr>
+      <tr>
+        <td>Child</td>
+        <td>£7.50</td>
+        <td>
+          
+    <select name="ticket" id="ticket2">
+    <option value="£0">0</option>
+    <option value="£7.5">1</option>
+    <option value="£15">2</option>
+    <option value="£22.5">3</option>
+    <option value="£30">4</option>
+    <option value="£37.5">5</option>
+            </select>          
+          </td>
+          <td><input id="subtotal2" disabled type="text" /></td>
+      </tr>
+      <tr>
+        <td>Disabled</td>
+        <td>£7.50</td>
+        <td>
+          
+    <select name="ticket" id="ticket3">
+    <option value="£0">0</option>
+    <option value="£7.5">1</option>
+    <option value="£15">2</option>
+    <option value="£22.5">3</option>
+    <option value="£30">4</option>
+    <option value="£37.5">5</option>
+            </select>          
+          </td>
+          <td><input id="subtotal3" disabled type="text" /></td>
+      </tr>
+    </tbody>
+  </table>
+          
+   <table class="table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>2D Premium Seat</th>
+        <th>Quantity</th>
+        <th>Sub-Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adult</td>
+        <td>£13</td>
+        <td>
+          
+    <select name="ticket" id="ticket4">
+    <option value="£0">0</option>
+    <option value="£13">1</option>
+    <option value="£26">2</option>
+    <option value="£38">3</option>
+    <option value="£50">4</option>
+    <option value="£62">5</option>
+            </select>          
+          </td>
+          <td><input id="subtotal4" disabled type="text" /></td>
+      </tr>
+      <tr>
+        <td>Child</td>
+        <td>£8.50</td>
+        <td>
+          
+    <select name="ticket" id="ticket5">
+    <option value="£0">0</option>
+    <option value="£8.5">1</option>
+    <option value="£17">2</option>
+    <option value="£25.5">3</option>
+    <option value="£34">4</option>
+    <option value="£42.5">5</option>
+            </select>          
+          </td>
+          <td><input id="subtotal5" disabled type="text" /></td>
+      </tr>
+      <tr>
+        <td>Disabled</td>
+        <td>£7.50</td>
+        <td>
+          
+    <select name="ticket" id="ticket6">
+    <option value="£0">0</option>
+    <option value="£8.5">1</option>
+    <option value="£17">2</option>
+    <option value="£25.5">3</option>
+    <option value="£34">4</option>
+    <option value="£42.5">5</option>
+            </select>          
+          </td>
+          <td><input id="subtotal6" disabled type="text" /></td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+      
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="GEKRQMUKRB7PC">
+<table>
+<tr><td><input type="hidden" name="on0" value="Ticket Options">Ticket Options</td></tr><tr><td><select name="os0">
+<option value="Adult">Adult £12.00 GBP</option>
+<option value="Child">Child £7.50 GBP</option>
+<option value="Disabled">Disabled £7.50 GBP</option>
+<option value="Adult">Premium Adult £13.00 GBP</option>
+<option value="Child">Premium Child £8.50 GBP</option>
+<option value="Disabled">Premium Disabled £8.50 GBP</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="GBP">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+</body>        
+    <footer class="container-fluid footerstyle text-right">
+   <button type="button" class="btn btn-primary">Contact Us</button>
+</footer>
+</html>
